@@ -1,0 +1,44 @@
+.stat {
+  @include card;
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  @include card-hover;
+}
+
+.value {
+  @include mono;
+  font-size: $fs-3xl;
+  font-weight: $fw-bold;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: $text-primary;
+
+  @media (min-width: $bp-md) {
+    font-size: $fs-4xl;
+  }
+}
+
+.up {
+  color: $accent;
+}
+
+.down {
+  color: $color-error;
+}
+
+.neutral {
+  color: $text-primary;
+}
+
+.label {
+  font-size: $fs-sm;
+  font-weight: $fw-medium;
+  color: $text-primary;
+}
+
+.caption {
+  font-size: $fs-xs;
+  color: $text-muted;
+  line-height: 1.5;
+}

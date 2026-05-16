@@ -1,0 +1,128 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: $nav-height;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid $border;
+}
+
+.inner {
+  @include container;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-6;
+}
+
+.logo {
+  @include mono;
+  font-size: $fs-base;
+  font-weight: $fw-semibold;
+  color: $text-primary;
+  display: inline-flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.logoBracket {
+  color: $accent;
+  margin: 0 2px;
+}
+
+.logoVs {
+  color: $text-muted;
+  margin: 0 $space-1;
+  font-weight: $fw-regular;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: $space-2;
+
+  @media (max-width: $bp-md - 1px) {
+    position: fixed;
+    top: $nav-height;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    padding: $space-4;
+    gap: $space-1;
+    background: $bg-secondary;
+    border-bottom: 1px solid $border;
+    transform: translateY(-110%);
+    transition: transform $transition;
+    pointer-events: none;
+  }
+}
+
+.navOpen {
+  @media (max-width: $bp-md - 1px) {
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+.link {
+  position: relative;
+  padding: $space-2 $space-3;
+  font-size: $fs-sm;
+  color: $text-secondary;
+  border-radius: $radius-sm;
+  transition: color $transition, background $transition;
+
+  &:hover {
+    color: $text-primary;
+    background: $bg-tertiary;
+  }
+}
+
+.linkActive {
+  color: $accent;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+
+  @media (max-width: $bp-md - 1px) {
+    display: flex;
+  }
+}
+
+.bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: $text-primary;
+  margin: 0 auto;
+  transition: transform $transition, opacity $transition;
+  border-radius: 1px;
+}
+
+.barOpen {
+  &:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  &:nth-child(2) {
+    opacity: 0;
+  }
+  &:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}

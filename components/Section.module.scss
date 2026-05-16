@@ -1,0 +1,45 @@
+.section {
+  @include section-spacing;
+}
+
+.bordered {
+  border-top: 1px solid $border;
+}
+
+.container {
+  @include container;
+}
+
+.header {
+  max-width: 720px;
+  margin-bottom: $space-12;
+}
+
+.eyebrow {
+  @include mono;
+  display: inline-block;
+  font-size: $fs-xs;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $accent;
+  margin-bottom: $space-3;
+  padding: $space-1 $space-2;
+  background: $accent-dim;
+  border-radius: $radius-sm;
+}
+
+.title {
+  @include heading-2;
+  color: $text-primary;
+  margin-bottom: $space-4;
+}
+
+.description {
+  font-size: $fs-lg;
+  color: $text-secondary;
+  line-height: 1.6;
+}
+
+.body {
+  // Body content slots in as-is
+}

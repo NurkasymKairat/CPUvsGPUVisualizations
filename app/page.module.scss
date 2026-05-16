@@ -1,0 +1,97 @@
+// Task cards
+.taskGrid {
+  @include grid-cards(300px);
+}
+
+.taskCard {
+  @include card;
+  @include card-hover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+  min-height: 240px;
+  padding: $space-8;
+  color: $text-primary;
+
+  &:hover {
+    transform: translateY(-2px);
+
+    .taskArrow {
+      color: $accent;
+      transform: translateX(4px);
+    }
+  }
+}
+
+.taskBadge {
+  @include mono;
+  position: absolute;
+  top: $space-6;
+  right: $space-6;
+  font-size: $fs-xs;
+  color: $text-muted;
+}
+
+.taskPattern {
+  @include mono;
+  font-size: $fs-xs;
+  color: $accent;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.taskTitle {
+  @include heading-3;
+  color: $text-primary;
+}
+
+.taskDesc {
+  font-size: $fs-sm;
+  line-height: 1.6;
+  color: $text-secondary;
+  flex: 1;
+}
+
+.taskArrow {
+  font-size: $fs-xl;
+  color: $text-muted;
+  transition: color $transition, transform $transition;
+  align-self: flex-end;
+}
+
+// Stack
+.stackGrid {
+  @include grid-cards(240px);
+}
+
+.stackItem {
+  display: flex;
+  flex-direction: column;
+  gap: $space-1;
+  padding: $space-4 0;
+  border-top: 1px solid $border;
+
+  &:hover .stackName {
+    color: $accent;
+  }
+}
+
+.stackName {
+  @include mono;
+  font-size: $fs-lg;
+  font-weight: $fw-semibold;
+  color: $text-primary;
+  transition: color $transition;
+}
+
+.stackDetail {
+  font-size: $fs-sm;
+  color: $text-muted;
+  line-height: 1.5;
+}
+
+// Stats
+.statsGrid {
+  @include grid-cards(240px);
+}

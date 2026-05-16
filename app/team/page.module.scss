@@ -1,0 +1,140 @@
+.intro {
+  padding-top: $space-16;
+  padding-bottom: $space-12;
+}
+
+.introInner {
+  @include container;
+  max-width: 800px;
+}
+
+.eyebrow {
+  @include mono;
+  display: inline-block;
+  font-size: $fs-xs;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $accent;
+  margin-bottom: $space-4;
+  padding: $space-1 $space-2;
+  background: $accent-dim;
+  border-radius: $radius-sm;
+}
+
+.title {
+  @include heading-1;
+  margin-bottom: $space-6;
+}
+
+.description {
+  font-size: $fs-lg;
+  color: $text-secondary;
+  line-height: 1.7;
+}
+
+.grid {
+  @include grid-cards(320px);
+}
+
+.card {
+  @include card;
+  @include card-hover;
+  padding: $space-8;
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  padding-bottom: $space-4;
+  border-bottom: 1px solid $border;
+}
+
+.name {
+  @include heading-3;
+  color: $text-primary;
+}
+
+.role {
+  font-size: $fs-sm;
+  font-weight: $fw-medium;
+  color: $accent;
+}
+
+.tech {
+  @include mono;
+  font-size: $fs-xs;
+  color: $text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.contributions {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+
+  li {
+    position: relative;
+    padding-left: $space-4;
+    font-size: $fs-sm;
+    line-height: 1.6;
+    color: $text-secondary;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      background: $accent;
+      border-radius: 50%;
+    }
+  }
+}
+
+.aiGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $space-4;
+  margin-bottom: $space-8;
+}
+
+.aiCard {
+  padding: $space-6;
+  background: $bg-secondary;
+  border: 1px solid $border;
+  border-radius: $radius-md;
+  transition: border-color $transition;
+
+  &:hover {
+    border-color: $border-hover;
+  }
+}
+
+.aiName {
+  @include mono;
+  font-size: $fs-lg;
+  font-weight: $fw-semibold;
+  color: $accent;
+  margin-bottom: $space-3;
+}
+
+.aiUse {
+  font-size: $fs-sm;
+  line-height: 1.6;
+  color: $text-secondary;
+}
+
+.disclosure {
+  font-size: $fs-sm;
+  line-height: 1.6;
+  color: $text-muted;
+  padding: $space-4;
+  border-top: 1px solid $border;
+  font-style: italic;
+}

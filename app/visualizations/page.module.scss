@@ -1,0 +1,162 @@
+.intro {
+  padding-top: $space-16;
+  padding-bottom: $space-12;
+}
+
+.introInner {
+  @include container;
+  max-width: 800px;
+}
+
+.eyebrow {
+  @include mono;
+  display: inline-block;
+  font-size: $fs-xs;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $accent;
+  margin-bottom: $space-4;
+  padding: $space-1 $space-2;
+  background: $accent-dim;
+  border-radius: $radius-sm;
+}
+
+.title {
+  @include heading-1;
+  margin-bottom: $space-6;
+}
+
+.description {
+  font-size: $fs-lg;
+  color: $text-secondary;
+  line-height: 1.7;
+  margin-bottom: $space-6;
+
+  em {
+    color: $text-primary;
+    font-style: italic;
+  }
+}
+
+.placeholder {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-3;
+  padding: $space-4;
+  background: $bg-secondary;
+  border: 1px solid $border;
+  border-left: 3px solid $color-warning;
+  border-radius: $radius-md;
+  font-size: $fs-sm;
+  color: $text-secondary;
+  line-height: 1.6;
+
+  code {
+    @include mono;
+    font-size: $fs-xs;
+    padding: 1px 6px;
+    background: $bg-tertiary;
+    border: 1px solid $border;
+    border-radius: $radius-sm;
+    color: $accent;
+  }
+}
+
+.placeholderTag {
+  @include mono;
+  flex-shrink: 0;
+  font-size: $fs-xs;
+  font-weight: $fw-semibold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $color-warning;
+  padding: 2px 8px;
+  border: 1px solid $color-warning;
+  border-radius: $radius-sm;
+}
+
+.viz {
+  padding-top: $space-12;
+  padding-bottom: $space-12;
+}
+
+.bordered {
+  border-top: 1px solid $border;
+}
+
+.vizInner {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: $space-6;
+}
+
+.vizHeader {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: $space-6;
+  align-items: flex-start;
+  max-width: 820px;
+}
+
+.vizIndex {
+  @include mono;
+  font-size: $fs-2xl;
+  font-weight: $fw-bold;
+  color: $accent;
+  line-height: 1;
+}
+
+.vizSubtitle {
+  @include mono;
+  display: block;
+  font-size: $fs-xs;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $accent;
+  margin-bottom: $space-2;
+}
+
+.vizTitle {
+  @include heading-3;
+  margin-bottom: $space-3;
+}
+
+.vizDesc {
+  font-size: $fs-sm;
+  line-height: 1.6;
+  color: $text-secondary;
+}
+
+.canvasWrapper {
+  position: relative;
+  background: $bg-secondary;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  padding: $space-4;
+}
+
+.canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  background: $bg-primary;
+  border-radius: $radius-md;
+  border: 1px dashed $border-hover;
+}
+
+.canvasOverlay {
+  position: absolute;
+  top: $space-6;
+  right: $space-6;
+  @include mono;
+  font-size: $fs-xs;
+  color: $text-muted;
+  padding: $space-1 $space-3;
+  background: rgba(20, 20, 20, 0.8);
+  border-radius: $radius-sm;
+  pointer-events: none;
+}

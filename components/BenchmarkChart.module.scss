@@ -1,0 +1,59 @@
+.wrapper {
+  width: 100%;
+  background: $bg-secondary;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  padding: $space-4 $space-2 $space-2;
+
+  @media (min-width: $bp-md) {
+    padding: $space-6 $space-4 $space-4;
+  }
+}
+
+.tooltip {
+  background: $bg-tertiary;
+  border: 1px solid $accent;
+  border-radius: $radius-md;
+  padding: $space-3 $space-4;
+  min-width: 200px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.tooltipLabel {
+  @include mono;
+  font-size: $fs-xs;
+  color: $accent;
+  margin-bottom: $space-2;
+  padding-bottom: $space-2;
+  border-bottom: 1px solid $border;
+}
+
+.tooltipRows {
+  display: flex;
+  flex-direction: column;
+  gap: $space-1;
+}
+
+.tooltipRow {
+  display: grid;
+  grid-template-columns: 10px 1fr auto;
+  align-items: center;
+  gap: $space-2;
+  font-size: $fs-xs;
+}
+
+.swatch {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.tooltipName {
+  color: $text-secondary;
+}
+
+.tooltipValue {
+  @include mono;
+  color: $text-primary;
+  font-weight: $fw-medium;
+}

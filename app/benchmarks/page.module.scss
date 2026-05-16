@@ -1,0 +1,130 @@
+.intro {
+  padding-top: $space-16;
+  padding-bottom: $space-12;
+}
+
+.introInner {
+  @include container;
+  max-width: 800px;
+}
+
+.eyebrow {
+  @include mono;
+  display: inline-block;
+  font-size: $fs-xs;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $accent;
+  margin-bottom: $space-4;
+  padding: $space-1 $space-2;
+  background: $accent-dim;
+  border-radius: $radius-sm;
+}
+
+.title {
+  @include heading-1;
+  margin-bottom: $space-6;
+}
+
+.description {
+  font-size: $fs-lg;
+  color: $text-secondary;
+  line-height: 1.7;
+}
+
+.benchmark {
+  padding-top: $space-12;
+  padding-bottom: $space-12;
+}
+
+.bordered {
+  border-top: 1px solid $border;
+}
+
+.benchmarkInner {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: $space-6;
+}
+
+.benchmarkHeader {
+  max-width: 720px;
+}
+
+.pattern {
+  @include mono;
+  display: inline-block;
+  font-size: $fs-xs;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $accent;
+  margin-bottom: $space-3;
+}
+
+.benchmarkTitle {
+  @include heading-2;
+  margin-bottom: $space-4;
+}
+
+.benchmarkDesc {
+  font-size: $fs-base;
+  color: $text-secondary;
+  line-height: 1.6;
+}
+
+.insight {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  padding: $space-6;
+  background: $bg-secondary;
+  border: 1px solid $border;
+  border-left: 3px solid $accent;
+  border-radius: $radius-md;
+}
+
+.insightLabel {
+  @include mono;
+  font-size: $fs-xs;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $accent;
+}
+
+.insightText {
+  font-size: $fs-base;
+  line-height: 1.6;
+  color: $text-primary;
+}
+
+.methodList {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  font-size: $fs-base;
+  color: $text-secondary;
+  line-height: 1.6;
+  max-width: 800px;
+
+  li {
+    padding-left: $space-4;
+    border-left: 2px solid $border;
+  }
+
+  strong {
+    color: $text-primary;
+    font-weight: $fw-semibold;
+    margin-right: $space-1;
+  }
+
+  code {
+    @include mono;
+    font-size: $fs-sm;
+    padding: 2px 6px;
+    background: $bg-tertiary;
+    border: 1px solid $border;
+    border-radius: $radius-sm;
+    color: $accent;
+  }
+}
