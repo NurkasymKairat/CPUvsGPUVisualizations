@@ -1,0 +1,138 @@
+.race {
+  background: $bg-secondary;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  padding: $space-6;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: $space-4;
+  margin-bottom: $space-4;
+  padding-bottom: $space-3;
+  border-bottom: 1px solid $border;
+}
+
+.title {
+  @include mono;
+  font-size: $fs-xs;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $accent;
+}
+
+.legend {
+  @include mono;
+  font-size: $fs-xs;
+  color: $text-muted;
+}
+
+.rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  align-items: center;
+  gap: $space-4;
+
+  @media (max-width: $bp-md) {
+    grid-template-columns: 1fr;
+    gap: $space-1;
+  }
+}
+
+.label {
+  @include mono;
+  font-size: $fs-sm;
+  color: $text-secondary;
+  text-align: right;
+
+  @media (max-width: $bp-md) {
+    text-align: left;
+  }
+}
+
+.track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  height: 32px;
+  padding: 0 $space-3;
+  background: $bg-tertiary;
+  border: 1px solid $border;
+  border-radius: $radius-sm;
+  overflow: hidden;
+}
+
+.bar {
+  height: 18px;
+  min-width: 4px;
+  border-radius: $radius-sm;
+  background: $color-cpu;
+  flex-shrink: 0;
+  transition: width 400ms ease-out, background 250ms ease, box-shadow 250ms ease;
+}
+
+.toneCpuLight  { background: #60a5fa; }
+.toneCpuMid    { background: $color-cpu; }
+.toneCpuDark   { background: $color-cpu-dark; }
+.toneGpuDark   { background: $color-gpu-dark; }
+.toneGpu       { background: $color-gpu; }
+
+.fastest {
+  background: $accent;
+  box-shadow: 0 0 12px rgba(0, 255, 136, 0.55);
+}
+
+.slowest {
+  background: rgba(239, 68, 68, 0.55);
+}
+
+.time {
+  @include mono;
+  font-size: $fs-xs;
+  font-variant-numeric: tabular-nums;
+  color: $text-primary;
+  white-space: nowrap;
+}
+
+.fastestTag {
+  @include mono;
+  margin-left: auto;
+  font-size: $fs-xs;
+  font-weight: $fw-semibold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $accent;
+  padding: 2px $space-2;
+  border: 1px solid $accent;
+  border-radius: $radius-sm;
+  background: $accent-dim;
+  white-space: nowrap;
+}
+
+.rowMissing {
+  .track {
+    border-style: dashed;
+    background: transparent;
+    justify-content: center;
+  }
+}
+
+.notMeasured {
+  @include mono;
+  font-size: $fs-xs;
+  color: $text-muted;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
