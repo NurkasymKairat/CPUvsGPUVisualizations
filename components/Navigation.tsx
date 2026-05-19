@@ -9,7 +9,6 @@ const links = [
   { href: '/', label: 'Home' },
   { href: '/benchmarks', label: 'Benchmarks' },
   { href: '/crossover', label: 'Crossover' },
-  { href: '/visualizations', label: 'Visualizations' },
   { href: '/team', label: 'Team' },
 ];
 
