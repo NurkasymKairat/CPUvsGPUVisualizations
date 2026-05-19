@@ -2,9 +2,9 @@ import type { BenchmarkPoint } from './mandelbrot';
 
 export const heatData: BenchmarkPoint[] = [
   { size: 128,  cpuNaive: 15.5224, cpuOmp: 36.4151, cpuAvx2: 3.3753 },
-  { size: 256,  cpuNaive: 63.2442, cpuOmp: 66.7044, cpuAvx2: 20.2513, gpuNaive: 2.99, gpuOptimized: 3.722 },
-  { size: 512,  cpuNaive: 504.082, cpuOmp: 200.357, cpuAvx2: 203.656, gpuNaive: 2.927, gpuOptimized: 11.810 },
-  { size: 1024, cpuNaive: 1521.78, cpuOmp: 526.038, cpuAvx2: 515.654, gpuNaive: 2.9, gpuOptimized: 52.499},
+  { size: 256,  cpuNaive: 63.2442, cpuOmp: 66.7044, cpuAvx2: 20.2513, gpuNaive: 2.905, gpuOptimized: 3.722 },
+  { size: 512,  cpuNaive: 504.082, cpuOmp: 200.357, cpuAvx2: 203.656, gpuNaive: 5.868, gpuOptimized: 11.810 },
+  { size: 1024, cpuNaive: 1521.78, cpuOmp: 526.038, cpuAvx2: 515.654, gpuNaive: 39.298, gpuOptimized: 52.499},
 ];
 
 export const heatMeta = {
