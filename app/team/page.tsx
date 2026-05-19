@@ -25,21 +25,21 @@ const team = [
   {
     name: 'Alan',
     role: 'GPU Optimizations',
-    tech: 'CUDA · Shared memory',
+    tech: 'CUDA · Warp divergence',
     contributions: [
-      'Rewrote the dot product with warp shuffles and a shared-memory tree reduction',
-      'Implemented shared-memory tiling for the heat-equation stencil',
-      'Tuned block sizes and occupancy with Nsight Compute',
+      'Rewrote the Mandelbrot kernel to reduce warp divergence, achieving 3.83× speedup over the naïve GPU version at 1024²',
+      'Explored shared-memory tiling for the heat-equation stencil as a learning exercise — produced a negative result that informed our methodology discussion',
+      'Prototyped a warp-level reduction for dot product (experimental, not included in the main benchmarks due to size-grid incompatibility)',
     ],
   },
   {
     name: 'Zhanbolat',
     role: 'Profiling & Benchmarking',
-    tech: 'Nsight · perf',
+    tech: 'Bash · Python · CSV',
     contributions: [
-      'Built the sweep script that runs every implementation across the size grid',
-      'Profiled hotspots and produced the roofline charts for each kernel',
-      'Validated GPU timings with CUDA events vs wall-clock to confirm the methodology',
+      'Built the benchmark harness that runs every implementation across the full size grid with 5 runs per configuration and median reporting',
+      'Aggregated CPU and GPU results into a single CSV that feeds every chart on this site',
+      'Validated GPU timings with CUDA events to correctly capture asynchronous kernel completion',
     ],
   },
   {

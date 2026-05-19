@@ -21,8 +21,7 @@ export function CpuMesh({
   const ref = useRef<Group>(null);
   const { scene } = useGLTF('/models/free_intel_cpu.glb');
 
-  // Clone so each Canvas instance gets its own scene graph — useGLTF returns a
-  // shared Group, and Three.js objects can only have one parent at a time.
+
   const instance = useMemo(() => scene.clone(true), [scene]);
 
   const fit = useMemo(() => {
