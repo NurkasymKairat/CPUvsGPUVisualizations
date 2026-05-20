@@ -10,10 +10,10 @@ export interface BenchmarkPoint {
 }
 
 export const mandelbrotData: BenchmarkPoint[] = [
-  { size: 256,  cpuNaive: 51.832,  cpuOmp: 8.5323,  cpuAvx2: 8.1674,  gpuNaive: 0.707, gpuOptimized: 0.090 },
-  { size: 512,  cpuNaive: 188.743, cpuOmp: 34.1192, cpuAvx2: 28.2134, gpuNaive: 0.718, gpuOptimized: 0.088 },
-  { size: 1024, cpuNaive: 743.159, cpuOmp: 111.224, cpuAvx2: 119.273, gpuNaive: 0.762, gpuOptimized: 0.159 },
-  { size: 2048, cpuNaive: 3130.62, cpuOmp: 448.762, cpuAvx2: 385.012, gpuNaive: 0.645, gpuOptimized: 0.385 },
+  { size: 256,  cpuNaive: 51.832,  cpuOmp: 8.5323,  cpuAvx2: 8.1674,  gpuNaive: 0.195, gpuOptimized: 0.090 },
+  { size: 512,  cpuNaive: 188.743, cpuOmp: 34.1192, cpuAvx2: 28.2134, gpuNaive: 0.250, gpuOptimized: 0.088 },
+  { size: 1024, cpuNaive: 743.159, cpuOmp: 111.224, cpuAvx2: 119.273, gpuNaive: 0.590, gpuOptimized: 0.159 },
+  { size: 2048, cpuNaive: 3130.62, cpuOmp: 448.762, cpuAvx2: 385.012, gpuNaive: 2.488, gpuOptimized: 0.385 },
   { size: 4096, cpuNaive: 11756.6, cpuOmp: 1753.77, cpuAvx2: 1553.53 },
 ];
 

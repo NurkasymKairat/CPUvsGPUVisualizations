@@ -3,9 +3,9 @@
 import type { BenchmarkPoint } from './mandelbrot';
 
 export const dotProductData: BenchmarkPoint[] = [
-  { size: 1_000_000,   cpuNaive: 1.0785,  cpuOmp: 1.4946,  cpuAvx2: 0.3659,  gpuNaive: 26.846, gpuOptimized: 0.059 },
-  { size: 10_000_000,  cpuNaive: 10.148,  cpuOmp: 4.2559,  cpuAvx2: 3.3087,  gpuNaive: 27.976, gpuOptimized: 0.479 },
-  { size: 100_000_000, cpuNaive: 101.276, cpuOmp: 29.4139, cpuAvx2: 35.5352, gpuNaive: 26.794, gpuOptimized: 3.886 },
+  { size: 1_000_000,   cpuNaive: 1.0785,  cpuOmp: 1.4946,  cpuAvx2: 0.3659,  gpuNaive: 2.095, gpuOptimized: 0.059 },
+  { size: 10_000_000,  cpuNaive: 10.148,  cpuOmp: 4.2559,  cpuAvx2: 3.3087,  gpuNaive: 20.144, gpuOptimized: 0.479 },
+  { size: 100_000_000, cpuNaive: 101.276, cpuOmp: 29.4139, cpuAvx2: 35.5352, gpuNaive: 198.150, gpuOptimized: 3.886 },
 ];
 
 export const dotProductMeta = {
